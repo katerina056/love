@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>50 причин, почему я тебя люблю ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@300;400;500&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- ФОН -->
+    <canvas id="skyCanvas"></canvas>
+    <div class="nebula"></div>
+    <div class="hearts-bg" id="heartsBg"></div>
+
+    <!-- ==================== СТАРТ ==================== -->
+    <section class="screen start-screen active" id="startScreen">
+        <div class="content">
+            <h1 class="title">50 причин</h1>
+            <h2 class="subtitle">почему я тебя люблю</h2>
+            <button class="heart-btn" id="startBtn" aria-label="Начать">
+                <span class="heart">❤️</span>
+            </button>
+            <p class="hint">нажми на сердечко</p>
+        </div>
+    </section>
+
+    <!-- ==================== ИГРА 1: ПОЙМАЙ СЕРДЕЧКО ==================== -->
+    <section class="screen game-screen" id="game1">
+        <div class="game-header">
+            <h2 class="game-title">поймай 5 сердечек 💘</h2>
+            <p class="game-subtitle">они убегают — успей тапнуть</p>
+            <div class="game-stats">Поймано: <b id="g1count">0</b> / 5</div>
+        </div>
+        <div class="game-area" id="g1area"></div>
+    </section>
+
+    <!-- ==================== ПРИЧИНЫ ==================== -->
+    <section class="screen reasons-screen" id="reasonsScreen">
+        <div class="progress-line">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <div class="reason-wrap" id="reasonWrap">
+            <div class="reason-number" id="cardNumber">1</div>
+            <p class="reason-text" id="cardText"></p>
+        </div>
+        <div class="swipe-hint">
+            <span class="arrow">←</span>
+            <span class="hint-text">свайпни</span>
+            <span class="arrow">→</span>
+        </div>
+        <div class="tap-zone left" id="tapLeft"></div>
+        <div class="tap-zone right" id="tapRight"></div>
+    </section>
+
+    <!-- ==================== ИГРА 2: ПАЗЛ ==================== -->
+    <section class="screen game-screen puzzle-screen" id="game2">
+        <div class="game-header">
+            <h2 class="game-title">собери сердечко 🧩</h2>
+            <p class="game-subtitle">перетащи кусочки на свои места</p>
+        </div>
+        <div class="puzzle-board" id="puzzleBoard"></div>
+        <p class="puzzle-progress">собрано: <b id="puzzleCount">0</b> / 9</p>
+    </section>
+
+    <!-- ==================== ИГРА 3: УСПЕЙ НАЖАТЬ ==================== -->
+    <section class="screen game-screen" id="game3">
+        <div class="game-header">
+            <h2 class="game-title">успей нажать ⚡</h2>
+            <p class="game-subtitle">тапни 10 раз за 8 секунд</p>
+            <div class="game-stats">
+                <span>Клики: <b id="g3count">0</b> / 10</span>
+                <span class="timer">⏱ <b id="g3timer">8.0</b>с</span>
+            </div>
+        </div>
+        <button class="big-tap-btn" id="g3btn">
+            <span>НАЖМИ!</span>
+        </button>
+    </section>
+
+    <!-- ==================== ИГРА 4: НАЙДИ ПАРУ ==================== -->
+    <section class="screen game-screen memory-screen" id="game4">
+        <div class="game-header">
+            <h2 class="game-title">найди пару 🎴</h2>
+            <p class="game-subtitle">открой все 6 пар</p>
+            <div class="game-stats">Пары: <b id="g4count">0</b> / 6</div>
+        </div>
+        <div class="memory-grid" id="g4grid"></div>
+    </section>
+
+    <!-- ==================== ИГРА 5: ЛОПНИ ШАРИКИ ==================== -->
+    <section class="screen game-screen" id="game5">
+        <div class="game-header">
+            <h2 class="game-title">лопни все шарики 🎈</h2>
+            <p class="game-subtitle">тапай по шарикам</p>
+            <div class="game-stats">Лопнуто: <b id="g5count">0</b> / 15</div>
+        </div>
+        <div class="game-area" id="g5area"></div>
+    </section>
+
+    <!-- ==================== СКРЫТОЕ ПИСЬМО ==================== -->
+    <section class="screen letter-screen" id="letterScreen">
+        <div class="letter-paper">
+            <div class="letter-heart">💌</div>
+            <h2 class="letter-title">для тебя</h2>
+            <p class="letter-text" id="letterText"></p>
+            <button class="letter-btn" id="letterBtn">дальше →</button>
+        </div>
+    </section>
+
+    <!-- ==================== ФИНАЛ ==================== -->
+    <section class="screen final-screen" id="finalScreen">
+        <div class="content">
+            <div class="big-heart">💖</div>
+            <h1 class="final-title">и это только начало</h1>
+            <p class="final-text">
+                настоящих причин гораздо больше,<br>
+                но эти 50 — те, что поместились в слова
+            </p>
+            <button class="restart-btn" id="finalRestart">пройти заново</button>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
